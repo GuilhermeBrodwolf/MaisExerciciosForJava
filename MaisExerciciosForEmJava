@@ -1,0 +1,84 @@
+package javaexerciciosfor;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author guilherme_nones
+ */
+public class JavaExerciciosFor {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        /*
+        int numero, soma = 0;
+        
+        for(int i = 1; i <= 10; i++){
+            System.out.println("Digite o " + i + "º número para somarmos: ");
+            numero = sc.nextInt();
+            
+            soma = soma + numero;
+        }
+            System.out.println("A soma dos 10 números é: " + soma);
+         */
+ /*
+        int numero, resultado = 0, i = 0, valorLimite;
+        
+        System.out.println("Digite o valor que quer ver a tabuada de multiplicação até 10");
+        numero = sc.nextInt();   
+        
+        System.out.println("Até que valor limite você quer a tabuada?");
+        valorLimite = sc.nextInt();  
+        
+        System.out.print("\n");
+        
+        for(i = 0; i <= valorLimite; i++){
+            resultado = i * numero; 
+            
+            System.out.println(i + " X " + numero + " = " + resultado);
+        }
+         */
+        int quantidadeNotas, quantidadeAlunos;
+        double media = 0.0, nota = 0.0, somaNotas = 0;
+        String nome;
+
+        System.out.println("Quantos alunos tem na turma?");
+            quantidadeAlunos = sc.nextInt();            
+        System.out.println("-----------------------");
+
+        System.out.println("Digite o nome do aluno que deseja verificar a média:");
+            nome = sc.next();
+        System.out.println("-----------------------");
+
+        System.out.println("Quantas provas foram realizadas?");
+            quantidadeNotas = sc.nextInt();
+        System.out.println("-----------------------");
+
+        for (int i = 1; i <= quantidadeNotas; i++) {
+            System.out.println("Digite a " + i + "ª nota");
+            nota = sc.nextInt();
+
+            somaNotas = somaNotas + nota;
+
+            media = somaNotas / quantidadeNotas;
+
+        }
+        
+        System.out.println("-----------------------");
+
+        System.out.println("A média do aluno " + nome + " é " + media);
+        
+        System.out.println("-----------------------");
+            
+        if(media >= 7){
+            System.out.println("Aluno Aprovado!");
+        }if(media >= 6 && media < 7){
+            System.out.println("Aluno em Exame!");
+        }if(media < 6){
+            System.out.println("Aluno Reprovado!");
+        }
+
+    }
+
+}
